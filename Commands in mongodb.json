@@ -1,0 +1,53 @@
+1. show databases;
+
+2. use library;
+
+3. show collections;
+
+4. db.dropDatabase('library');
+
+5. db.createCollection('employees');
+
+6. db.employees.insertOne({"eid":1,"ename":"JASH","esal":50000});
+
+7. db.employees.insertMany([{"eid":1,"ename":"JASH","esal":50000},{"eid":2,"ename":"RK","esal":45000},{"eid":3,"ename":"JASH","esal":30000}]);
+
+8. db.employees.find();
+
+9. db.employees.find().pretty();
+
+10. db.employees.find({"ename":{$nin:["Gabby"]}});
+
+11. db.employees.find({"ename":{$nin:["Gabby"]}}).count();
+
+12. db.employees.find({age: 25});
+
+13. db.employees.find({age:{$gt:20}});
+
+14. db.employees.find({age:{$lt:20}});
+
+15.  db.employees.find({age:{$gt:20}}).count();
+
+16.  db.employees.find({age:{$lt:20}}).count();
+
+17.  db.employees.find({age:{$gte:20,$lte:40}});
+
+18. db.employees.find({age:{$gte: 20,$lte: 40}}).count();
+
+19. db.employees.find({$or: [{age: 25},{age: 99}]})
+
+20.  db.employees.find({ename: { $not:{$eq: "Hasheem"}}})
+
+21. db.employees.find({ename:{$eq: "Hasheem"}})
+
+22. db.employees.find().limit(5)
+
+23. db.employees.find().skip(5)
+
+24. db.employees.find().sort({age: -1})
+
+25. db.employees.find().sort({age: 1})
+
+26.db.employees.find({age: { $in: [3,25,43,99] } })
+
+27. db.employees.find({age: { $nin: [3,25,43,99] } })
