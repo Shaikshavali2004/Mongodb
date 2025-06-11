@@ -8,17 +8,17 @@ db.dropDatabase('h2')
 
 show collections
 
-db.createCollection('users')
+db.createCollection('employees')
 
-db.users.drop()
+db.employees.drop()
 
-db.users.insertMany([{"used":102,"uname":"SG"},{"used":103,"uname":"PG"},{"used":104,"uname":"Modi"},{"used":105,"uname":"Amith"}])
+db.employees.insertMany([{"eid":101,"ename":"SG"},{"eid":102,"ename":"PG"},{"eid":103,"ename":"Modi"},{"eid":104,"ename":"Amith"}])
 
-db.users.find()
+db.employees.find()
 
-db.users.find().count()
+db.employees.find().count()
 
-db.users.countDocuments()
+db.employees.countDocuments()
 
 db.employees.insertMany([{"eid":1,"ename":"Blinni","gender":"Female"},
 {"eid":2,"ename":"Giorgi","gender":"Male"},
