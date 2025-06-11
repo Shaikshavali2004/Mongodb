@@ -12,6 +12,8 @@ db.createCollection('employees')
 
 db.employees.drop()
 
+db.employees.insertOne({"eid":105,"ename":"Jashnavi"})
+
 db.employees.insertMany([{"eid":101,"ename":"SG"},{"eid":102,"ename":"PG"},{"eid":103,"ename":"Modi"},{"eid":104,"ename":"Amith"}])
 
 db.employees.find()
