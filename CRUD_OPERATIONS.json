@@ -1,0 +1,14 @@
+
+db.employees.find({"gender":"Male"})
+
+db.employees.find({"gender":"Male"}).count()
+
+db.employees.find().skip(10)
+
+db.employees.find().limit(10)
+
+db.employees.updateOne({"eid":6},{$set:{"ename":"Janu"}})
+
+db.employees.find({"eid":6})
+ 
+db.employees.updateMany({},{$set:{"loc":"Bangalore"}})
